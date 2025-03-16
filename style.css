@@ -1,0 +1,371 @@
+/* Asigură că pagina ocupă întreaga înălțime a browserului */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background: url('https://tikaboo.ro/wp-content/uploads/2017/10/team-386673_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Conținut principal */
+body {
+    flex: 1 0 auto;
+}
+
+/* Navbar */
+nav {
+    background-color: rgba(28, 28, 30, 0.8); /* Fundal semi-transparent */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundal alb semi-transparent */
+    margin: 20px;
+    border-radius: 10px;
+}
+table{
+    background-color: white;
+    margin-left: 100px;
+    
+}
+.contact{
+    background-color: white;
+    border-radius: 100px;
+    width: 80%;
+    height: 50vh;
+    margin-left: 200px;
+    margin-right: 500px;
+    padding: 30px;
+}
+header h1 {
+    font-size: 36px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundal alb semi-transparent */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.intro-section h2 {
+    font-size: 28px;
+    color: #1b5e20;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: rgba(28, 28, 30, 0.8); /* Fundal semi-transparent */
+    color: white;
+    padding: 20px 0;
+    margin-top: auto; /* Asigură că footer-ul este împins în partea de jos */
+    flex-shrink: 0;
+}
+
+footer .footer-links {
+    margin-bottom: 10px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #76c7c0;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+.steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+    text-align: center;
+    padding: 10px;
+}
+
+.step h2 {
+    font-size: 24px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Secțiunea formularului */
+.form-section {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #145a16;
+}
+
+/* Secțiunea proiectelor */
+.projects {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.projects h2 {
+    text-align: center;
+    color: #1b5e20; /* O nuanță de verde închis */
+    font-size: 28px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundal alb cu opacitate */
+    padding: 10px 15px;
+    display: inline-block; /* Se aplică doar textului */
+    border-radius: 8px; /* Colțuri rotunjite pentru un aspect modern */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbra subtilă */
+}
+.project h3 a {
+    color: #1b5e20; /* Verde închis */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project h3 a:hover {
+    color: #388e3c; /* Verde mai deschis pentru hover */
+    text-decoration: underline;
+}
+.project-details {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.project-details strong {
+    color: #1b5e20;
+}
+/* Fundal pentru Proiectul „Masa pentru toți” */
+body.proiect-masa-pentru-toti {
+    background-image: url('https://g4food.ro/wp-content/uploads/2024/04/banca-alimente.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Fundal pentru Proiectul „Frigiderul Comunitar” */
+body.proiect-frigider-comunitar {
+    background-image: url('https://examplhttps://www.google.com/url?sa=i&url=https%3A%2F%2Ffloree.fi%2F2025%2F03%2F10%2Fcum-sa-ti-faci-frigider-sa-utilizeze-mai-putina-energie-6-sfaturi-esentiale%2F&psig=AOvVaw0QUT-4fjIva9Ldy8BCBhHu&ust=1742196430878000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLDYzdqJjowDFQAAAAAdAAAAABAEe-image-url.jpg'); /* Schimbă cu linkul final */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Fundal pentru Proiectul „Educație pentru Risipă Zero” */
+body.proiect-educatie-zero-risipa {
+    background-image: url('https://www.opiniatimisoarei.ro/wp-content/uploads/2024/10/usv1.jpg'); /* Schimbă cu URL-ul dorit */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.contact-page {
+    background-image: url('https://www.voluntariat.ro/wp-content/uploads/2024/02/contact-bg.jpg'); /* Înlocuiește cu linkul potrivit */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    max-width: 40%;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #4caf50;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-form-container {
+    max-width: 55%;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.alert {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}

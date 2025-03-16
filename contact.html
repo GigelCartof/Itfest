@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="cum-functioneaza.html">Cum funcționează</a></li>
+                <li><a href="implicate.html">Implică-te</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Informații de Contact</h2>
+                <p><strong>Adresă:</strong> Strada Voluntarilor, Nr. 15, București</p>
+                <p><strong>Telefon:</strong> +40 123 456 789</p>
+                <p><strong>Email:</strong> contact@voluntariat.ro</p>
+            </div>
+
+            <div class="contact-form-container">
+                <h1>Contactează-ne</h1>
+                <p>Suntem aici pentru tine. Completează formularul și te vom contacta cât mai curând!</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nume</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Prenume</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Vârstă</label>
+                        <input type="number" id="age" name="age" min="16" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesaj</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Trimite</button>
+                </form>
+
+                <div class="alert" id="age-alert" style="display: none;">
+                    Trebuie să ai peste 16 ani pentru a deveni voluntar.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Organizația "Mâncare pentru toți". Toate drepturile rezervate.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            const ageInput = document.getElementById('age');
+            const ageAlert = document.getElementById('age-alert');
+
+            if (parseInt(ageInput.value, 10) < 16) {
+                event.preventDefault();
+                ageAlert.style.display = 'block';
+                ageAlert.textContent = 'Trebuie să ai peste 16 ani pentru a deveni voluntar.';
+            } else {
+                ageAlert.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

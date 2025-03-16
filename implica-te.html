@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implică-te</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="acasa.html">Acasă</a></li>
+            <li><a href="cum-functioneaza.html">Cum Funcționează</a></li>
+            <li><a href="implica-te.html" class="active">Implică-te</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Implică-te</h1>
+        <p>Fă parte din schimbare! Înscrie-te ca voluntar și contribuie la proiectele noastre.</p>
+    </header>
+
+    <!-- Formular de înscriere -->
+    <section class="form-section">
+        <h2>Formular de înscriere</h2>
+        <form id="volunteer-form">
+            <label for="name">Nume:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Vârstă:</label>
+            <input type="number" id="age" name="age" required min="16" placeholder="Minim 16 ani">
+
+            <label for="message">De ce dorești să te implici?</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Trimite</button>
+        </form>
+        <p id="form-message"></p>
+    </section>
+
+    <section class="projects">
+        <h2>Proiecte disponibile</h2>
+        <div class="project">
+            <h3><a href="proiect-masa-pentru-toti.html">Proiectul „Masa pentru toți”</a></h3>
+            <p>Ajutăm restaurantele locale să doneze surplusul de alimente persoanelor nevoiașe.</p>
+        </div>
+        <div class="project">
+            <h3><a href="proiect-frigider-comunitar.html">Proiectul „Frigiderul Comunitar”</a></h3>
+            <p>Implementăm frigidere publice unde oamenii pot dona și lua alimente gratuit.</p>
+        </div>
+        <div class="project">
+            <h3><a href="proiect-educatie-zero-risipa.html">Proiectul „Educație pentru Risipă Zero”</a></h3>
+            <p>Organizăm workshop-uri pentru a educa comunitățile despre reducerea risipei alimentare.</p>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="acasa.html">Acasă</a>
+            <a href="cum-functioneaza.html">Cum Funcționează</a>
+            <a href="implica-te.html">Implică-te</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2025 Asociația Voluntarilor. Toate drepturile rezervate.</p>
+    </footer>
+
+    <!-- Script pentru validarea vârstei -->
+    <script>
+        document.getElementById("volunteer-form").addEventListener("submit", function(event) {
+            const age = document.getElementById("age").value;
+            const formMessage = document.getElementById("form-message");
+            if (age < 16) {
+                event.preventDefault();
+                formMessage.textContent = "Trebuie să ai minim 16 ani pentru a deveni voluntar!";
+                formMessage.style.color = "red";
+            } else {
+                formMessage.textContent = "Formular trimis cu succes!";
+                formMessage.style.color = "green";
+            }
+        });
+    </script>
+</body>
+</html>
